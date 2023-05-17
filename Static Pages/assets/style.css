@@ -1,0 +1,51 @@
+:root {
+    --brown: #964913;
+    --orange: #EA9457;
+    --tan: #F4C5A4;
+    --dkgrey: #212121;
+    --font-family1-serif: 'Lora', 'Times New Roman', serif;
+    --font-family2-sans-serif: 'Open Sans', 'arial', sans-serif;
+}
+
+.header {
+    background-color: var(--dkgrey);
+}
+
+.logo {
+    max-width: 7vw;
+    max-height: 7vw;
+    vertical-align: middle;
+    font-family: 'Lora', 'Times New Roman', serif;
+}
+
+#dropdownDivider {
+    position: absolute;
+  }
+
+.hero h1 {
+    font-family: 'Lora', 'Times New Roman', serif;
+}
+
+.hero p {
+    font-family: 'Open Sans', 'arial', sans-serif;
+}
+
+.hero img {
+    filter: grayscale(100%);
+}
+
+.tagline h1 {
+    font-family: 'Lora', 'Times New Roman', serif;
+}
+
+.features h1 {
+    font-family: 'Lora', 'Times New Roman', serif;
+}
+
+.features h2 {
+    font-family: 'Lora', 'Times New Roman', serif;
+}
+
+.features p {
+    font-family: 'Open Sans', 'arial', sans-serif;
+}
