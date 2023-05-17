@@ -5,47 +5,35 @@
     --dkgrey: #212121;
     --font-family1-serif: 'Lora', 'Times New Roman', serif;
     --font-family2-sans-serif: 'Open Sans', 'arial', sans-serif;
-}
-
-.header {
+  }
+  
+  .header {
     background-color: var(--dkgrey);
-}
-
-.logo {
+  }
+  
+  .logo {
     max-width: 7vw;
     max-height: 7vw;
     vertical-align: middle;
-    font-family: 'Lora', 'Times New Roman', serif;
-}
-
-#dropdownDivider {
+    font-family: var(--font-family1-serif);
+  }
+  
+  #dropdownDivider {
     position: absolute;
   }
-
-.hero h1 {
-    font-family: 'Lora', 'Times New Roman', serif;
-}
-
-.hero p {
-    font-family: 'Open Sans', 'arial', sans-serif;
-}
-
-.hero img {
+  
+  .hero h1,
+  .tagline h1,
+  .features h1,
+  .features h2 {
+    font-family: var(--font-family1-serif);
+  }
+  
+  .hero p,
+  .features p {
+    font-family: var(--font-family2-sans-serif);
+  }
+  
+  .hero img {
     filter: grayscale(100%);
-}
-
-.tagline h1 {
-    font-family: 'Lora', 'Times New Roman', serif;
-}
-
-.features h1 {
-    font-family: 'Lora', 'Times New Roman', serif;
-}
-
-.features h2 {
-    font-family: 'Lora', 'Times New Roman', serif;
-}
-
-.features p {
-    font-family: 'Open Sans', 'arial', sans-serif;
-}
+  }  
