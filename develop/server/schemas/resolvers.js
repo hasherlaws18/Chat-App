@@ -12,13 +12,15 @@ const resolvers = {
     },
   },
 
-//   Mutation: {
-//     addUser: async (_, { user }) => {
-//       const newUser = await User.create(user);
-//       const token = signToken(user);
-//       return { token, newUser };
-//     },
 
+  Mutation: {
+    addUser: async (_, { user }) => {
+      const newUser = await User.create(user);
+      const token = signToken(user);
+      return { token, newUser };
+    },
+  }
+}
 //     loginUser: async (_, { email, password }) => {
 //       const user = await User.findOne({ email });
 

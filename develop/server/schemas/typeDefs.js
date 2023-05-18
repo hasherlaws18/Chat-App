@@ -24,20 +24,20 @@ const typeDefs = gql`
   }
 
 
-//   type Auth {
-//     token: ID!
-//     user: User
-//   }
+   type Auth {
+     token: ID!
+     user: User
+   }
 
-//   type Query {
-//     me(userId: ID!): User
-//   }
+   type Query {
+    me(userId: ID!): User
+  }
 
-//   type Mutation {
-//     addUser(username: String!, email: String!, password: String!): Auth
-//     loginUser(email: String!, password: String!): Auth
+  type Mutation {
+     addUser(username: String!, email: String!, password: String!): Auth
+     loginUser(email: String!, password: String!): Auth
        addComment(username: String!, Genre: _id!, text: String!): Auth
-//   }
-// `;
+   }
+ `;
 
 module.exports = typeDefs;
