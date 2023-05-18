@@ -12,10 +12,6 @@
   .footer {
     background-color: var(--dkgrey);
   }
-  
-  .footer {
-    margin-top: auto;
-  }
 
   .logo {
     max-width: 7vw;
