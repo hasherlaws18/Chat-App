@@ -27,7 +27,9 @@
   .hero h1,
   .tagline h1,
   .features h1,
-  .features h2 {
+  .features h2,
+  .login h1,
+  .register h1 {
     font-family: var(--font-family1-serif);
   }
   
