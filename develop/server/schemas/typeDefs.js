@@ -1,23 +1,28 @@
 const { gql } = require("apollo-server-express");
 
-// const typeDefs = gql`
-//   type Book {
-//     authors: [String]!
-//     description: String!
-//     bookId: String!
-//     image: String
-//     link: String
-//     title: String!
-//   }
+const typeDefs = gql`
 
-//   type User {
-//     _id: ID!
-//     username: String!
-//     email: String!
-//     password: String!
-//     savedBooks: [Book]!
-//     bookCount: Int!
-//   }
+  type User {
+    _id: ID!
+    username: String!
+    email: String!
+    password: String!
+    comments: [Comment]!
+  }
+
+  type Genre {
+    _id: ID!
+    name: String!
+    comments: [Comment]!
+  }
+
+  type Comment {
+    _id: ID!
+    username: String!
+    text: String!
+    genre: ID!
+  }
+
 
 //   type Auth {
 //     token: ID!
@@ -31,16 +36,7 @@ const { gql } = require("apollo-server-express");
 //   type Mutation {
 //     addUser(username: String!, email: String!, password: String!): Auth
 //     loginUser(email: String!, password: String!): Auth
-//     saveBook(
-//       userId: ID!
-//       authors: [String]!
-//       description: String!
-//       bookId: String!
-//       image: String
-//       link: String
-//       title: String
-//     ): User
-//     removeBook(userId: ID!, bookId: String!): User
+       addComment(username: String!, Genre: _id!, text: String!): Auth
 //   }
 // `;
 

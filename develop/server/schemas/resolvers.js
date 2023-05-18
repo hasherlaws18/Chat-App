@@ -1,16 +1,16 @@
 const { User } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 
-// const resolvers = {
-//   Query: {
-//     me: async (_, { userId }, context) => {
-//       const user = await User.findById(userId).populate("savedBooks");
-//       if (!user) {
-//         throw new AuthenticationError("No user found with this id");
-//       }
-//       return user;
-//     },
-//   },
+const resolvers = {
+  Query: {
+    me: async (_, { userId }, context) => {
+      const user = await User.findById(userId).populate("Genre");
+      if (!user) {
+        throw new AuthenticationError("No user found with this id");
+      }
+      return user;
+    },
+  },
 
 //   Mutation: {
 //     addUser: async (_, { user }) => {
