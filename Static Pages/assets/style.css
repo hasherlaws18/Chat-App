@@ -29,15 +29,31 @@
   .features h1,
   .features h2,
   .login h1,
-  .register h1 {
+  .register h1,
+  .user-list-container h1,
+  .groups h1 {
     font-family: var(--font-family1-serif);
   }
   
   .hero p,
-  .features p {
+  .features p,
+  .messages p {
     font-family: var(--font-family2-sans-serif);
   }
   
   .hero img {
     filter: grayscale(100%);
   }  
+
+.user-list-container .user-list-1:hover,
+.user-list-container .user-list-2:hover,
+.user-list-container .user-list-3:hover,
+.user-list-container .user-list-4:hover,
+.user-list-container .user-list-5:hover,
+.user-list-container .user-list-6:hover {
+    background-color: white;
+}
+
+.inline-block {
+    display: inline-block;
+}
