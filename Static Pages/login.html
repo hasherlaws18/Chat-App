@@ -72,80 +72,69 @@
     </nav>
 
     <main>
-        <!-- HERO SECTION -->
-        <section class="hero bg-yellow-100">
-            <div class="grid max-w-screen-xl mx-auto lg:gap-8 xl:gap-0 py-8 lg:py-0 lg:grid-cols-12">
-                <div class="bg-yellow-100 mr-auto place-self-center px-4 py-8 lg:col-span-6 lg:py-0">
-                    <h1
-                        class="max-w-xl mb-4 text-6xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
-                        LitChat is a space just for book lovers</h1>
-                    <p class="max-w-2xl mb-6 font-light text-gray-900 lg:mb-8 md:text-lg lg:text-xl">Join us to discuss
-                        your favorite books, share your thoughts on new releases, and connect with other bookworms from
-                        all over the world.</p>
-                    <a href="#"
-                        class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white border border-gray-900 rounded-lg bg-yellow-800 hover:bg-yellow-900 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                        Login
-                        <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </a>
-                    <a href="#"
-                        class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-900 rounded-lg bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:ring-gray-100">
-                        Register
-                    </a>
+        <!-- LOGIN SECTION -->
+        <section class="login bg-yellow-100">
+            <div class="flex flex-col items-center m-6 px-6 py-6 mx-auto md:h-screen lg:py-0">
+                <div
+                    class="login-form w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0">
+                    <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                        <h1
+                            class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                            Sign in to your account
+                        </h1>
+                        <form class="space-y-4 md:space-y-6" action="#">
+                            <div>
+                                <label for="email"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+                                    email</label>
+                                <input type="email" name="email" id="email"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="name@email.com" required="">
+                            </div>
+                            <div>
+                                <label for="password"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                                <input type="password" name="password" id="password" placeholder="••••••••"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    required="">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-start">
+                                    <div class="flex items-center h-5">
+                                        <input id="remember" aria-describedby="remember" type="checkbox"
+                                            class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
+                                            required="">
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                        <label for="remember" class="text-gray-500 dark:text-gray-300">Remember
+                                            me</label>
+                                    </div>
+                                </div>
+                                <a href="#"
+                                    class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot
+                                    password?</a>
+                            </div>
+                            <button type="submit"
+                                class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign
+                                in</button>
+                            <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                                Don’t have an account yet? <a href="#"
+                                    class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign
+                                    up</a>
+                            </p>
+                        </form>
+                    </div>
                 </div>
-                <div class="hidden lg:mt-0 lg:col-span-6 lg:flex">
-                    <img src="./images/hero.jpg" alt="hero-image">
-                </div>
-            </div>
-        </section>
-        <!-- TAGLINE SECTION -->
-        <section class="tagline py-20">
-            <h1 class="text-center text-white font-extrabold text-2xl">
-                With LitChat you can connect with other people around the world to chat about all things books!
-            </h1>
-        </section>
-        <!-- FEATURES SECTION -->
-        <section
-            class="features grid max-w-screen-xl mx-auto lg:gap-4 xl:gap-0 py-8 px-40 bg-yellow-100 lg:grid-cols-3">
-            <div class="text-center">
-                <h1 class="text-yellow-900 font-extrabold text-5xl">01</h1>
-                <div class="py-1 px-10 hidden lg:mt-0 lg:col-span-6 lg:flex">
-                    <img src="./images/feature-01-sm.png" alt="hero-image" class="rounded-t-full">
-                </div>
-                <h2 class="text-yellow-900 font-extrabold text-3xl">Lorem Ipsum</h2>
-                <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua.</p>
-            </div>
-            <div class="text-center">
-                <h1 class="text-yellow-900 font-extrabold text-5xl">02</h1>
-                <div class="py-1 px-10 hidden lg:mt-0 lg:col-span-6 lg:flex">
-                    <img src="./images/feature-02-sm.png" alt="hero-image" class="rounded-t-full">
-                </div>
-                <h2 class="text-yellow-900 font-extrabold text-3xl">Lorem Ipsum</h2>
-                <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua.</p>
-            </div>
-            <div class="text-center">
-                <h1 class="text-yellow-900 font-extrabold text-5xl">03</h1>
-                <div class="py-1 px-10 hidden lg:mt-0 lg:col-span-6 lg:flex">
-                    <img src="./images/feature-03-sm.png" alt="hero-image" class="rounded-t-full">
-                </div>
-                <h2 class="text-yellow-900 font-extrabold text-3xl">Lorem Ipsum</h2>
-                <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua.</p>
             </div>
         </section>
     </main>
     <!-- FOOTER -->
     <footer class="footer py-8 px-4 sm:px-6 lg:px-8">
         <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-white sm:text-center">© 2023 <a href="#" class="hover:underline">LitChat™</a>. All Rights Reserved.</span>
-          <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-            <!-- Social media links -->
+            <span class="text-sm text-white sm:text-center">© 2023 <a href="#" class="hover:underline">LitChat™</a>. All
+                Rights Reserved.</span>
+            <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                <!-- Social media links -->
                 <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path fill-rule="evenodd"

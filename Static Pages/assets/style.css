@@ -7,7 +7,9 @@
     --font-family2-sans-serif: 'Open Sans', 'arial', sans-serif;
   }
   
-  .header {
+  .header,
+  .tagline,
+  .footer {
     background-color: var(--dkgrey);
   }
   
