@@ -1,4 +1,4 @@
-const {Schema, models} = require('mongoose');
+const {Schema, model} = require('mongoose');
 
 const genreSchema = new Schema(
     {
@@ -11,11 +11,7 @@ const genreSchema = new Schema(
     
     },
 
-    {
-        toJSON: {
-            virtuals: true,
-        },
-    }
+    
 );
 
 const Genre = model('Genre', genreSchema);
