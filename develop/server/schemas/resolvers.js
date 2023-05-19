@@ -3,8 +3,8 @@ const { AuthenticationError } = require("apollo-server-express");
 
 const resolvers = {
   Query: {
-    me: async (_, { userId }, context) => {
-      const user = await User.findById(userId).populate("Genre");
+    me: async (_, { userID }, context) => {
+      const user = await User.findById(userID).populate("Genre");
       if (!user) {
         throw new AuthenticationError("No user found with this id");
       }

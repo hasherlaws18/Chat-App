@@ -1,4 +1,4 @@
-const {Schema, models} = require('mongoose');
+const {Schema, model} = require('mongoose');
 const Genre = require('./Genre')
 
 const commentSchema = new Schema(
@@ -13,14 +13,10 @@ const commentSchema = new Schema(
             type: String,
             required: true,
         },
-        comment: [Genre],
+        comments: [],
 
     },
-    {
-        toJSON: {
-            virtuals: true,
-        },
-    }
+   
 );
 
 const Comment = model('Comment', commentSchema);
