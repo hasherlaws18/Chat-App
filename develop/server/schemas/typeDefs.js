@@ -31,12 +31,14 @@ const typeDefs = gql`
     users: [User]
     genres: [Genre]
     comments: [Comment]
+    // Define a query with an ID paramenter as a query arguement to return a single genre object:
+    genre(_id: ID!): genre
   }
 
   type Mutation {
-    addUser(username: String!, email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): User
     loginUser(email: String!, password: String!): Auth
-    addComment(username: String!, genre: ID!, text: String!): Auth
+    addComment(username: String!, genre: ID!, text: String!): Comment
   }
 `;
 

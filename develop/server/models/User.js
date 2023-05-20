@@ -15,11 +15,11 @@ const userSchema = new Schema(
             match: [/.+@.+\..+/, 'Must use a valid email address'],
         },
         password: {
-            type: String,
+            type: Schema.Types.String,
             required: true,
         },
 
-        comments: []
+        comments: [{}]
  
     },
 
