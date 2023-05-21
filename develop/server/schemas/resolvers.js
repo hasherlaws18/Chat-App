@@ -1,5 +1,6 @@
 const { User, Genre, Comment } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
+const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
@@ -49,7 +50,12 @@ const resolvers = {
           password,
           comments,
         });
-        return newUser;
+        const token = signToken({
+          username,
+          email,
+          _id: newUser._id,
+        });
+        return { token, newUser };
       } catch (error) {
         // Handle any errors that occur during user creation
         throw new Error("Failed to create a new user.");
