@@ -12,3 +12,5 @@ const MessageSchema = new mongoose.Schema(
 const MessageModel = mongoose.model("Message", MessageSchema);
 
 module.exports = MessageModel;
+
+//need to add this on mongodb so messages can be stored in the database

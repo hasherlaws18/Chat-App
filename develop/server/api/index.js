@@ -8,6 +8,7 @@ const express = require("express");
 const cors = require("cors");
 //const bcrypt = require('bcryptjs')
 const User = require("./models/User");
+const Message = require("./models/Message");
 //const ws = require('ws')
 //const jwtSecret =
 const bcryptSalt = bcrypt.generateSaltSync(10);
@@ -22,6 +23,31 @@ app.use(
     origin: "`",
   })
 );
+
+async function getUserDataFromReq(req) {
+  return new Promise((resolve, reject) => {
+    const token = req.cookies?.token;
+    if (token) {
+      jwt.verify(token, jwtSecret, {}, (err, userData) => {
+        if (err) throw err;
+        resolve(userData);
+      });
+    } else {
+      reject("no token");
+    }
+  });
+}
+
+app.get("/messages/:userId", async (req, res) => {
+  const { userId } = req.params;
+  const userData = await getUserDataFromReq(req);
+  const ourUserId = userData.userId;
+  const messages = await Message.find({
+    sender: { $in: [userId, ourUserId] },
+    recipient: { $in: [userId, ourUserId] },
+  }).sort({ createdAt: -1 });
+  res.json(messages);
+});
 
 app.get("/profile", (req, res) => {
   const token = req.cookies?.token;
@@ -80,4 +106,41 @@ app.post("/register", async (req, res) => {
 const server = app.listen(3001);
 
 const wss = new ws.WebSocketServer({ server });
-wss.on("connection", (connection) => {});
+wss.on("connection", (connection, req) => {
+  const cookies = req.headers.cookie;
+  if (cookies) {
+    const tokenCookieString = cookies
+      .split(";")
+      .find((str) => str.startsWith("token"));
+    if (tokenCookieString) {
+      const token = tokenCookieString.split("=")[1];
+      if (token) {
+        jwt.verify(token, jwtSecret, {}, (err, userData) => {
+          if (err) throw err;
+          const { userId, username } = userData;
+          connection.userId = userId;
+          connection.username = username;
+        });
+      }
+    }
+  }
+});
+
+//really struggled with this part and trying to get messages to work properly
+//need to fit in async somehow because I have await
+const messageData = JSON.parse(message.toString());
+const { recipient, text } = messageData;
+if (recipient && text) {
+  const messageDoc = await Message.create({
+    sender: userId,
+    recipient,
+    text,
+  });
+  [...wss.clients]
+    .filter((c) => c.userId === recipient)
+    .forEach((c) =>
+      c.send(
+        JSON.stringify({ text, sender: userId, recipient, id: messageDoc._id })
+      )
+    );
+}
