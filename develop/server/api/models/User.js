@@ -10,3 +10,5 @@ const UserSchema = new mongoose.Schema(
 
 const UserModel = mongoose.model("User", UserSchema);
 module.exports = UserModel;
+
+//need to add this on mongodb so users can be stored in the database
