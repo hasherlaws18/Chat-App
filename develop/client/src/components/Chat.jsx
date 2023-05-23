@@ -54,57 +54,31 @@ useEffect(() => {
     }
 })
 
-<div onClick={() => setSelectedUserId(userId)}>
-    
-</div>
 
-
-//<div onClick={() => setSelectedUserId(userId)}></div>
+<div onClick={() => setSelectedUserId(userId)}></div>
 
 //Need to use selectUserId because I use it on line 5, but with only have one line for being able to click a user, I'm not sure how to integrate it.
 //All the code below here is very rough because I'm not really sure what to do
 
-
-// {!selectedUserId && (
-//     <div>select a user to chat</div>
-// )}
-
-// {!!selectedUserId && (
-//     <div>
-//         {messagesWithoutReps.map(message => (
-//             <div>
-//                 sender:{message.sender}<br/>
-//                 my id:{id}<br/>
-//                 {message.text}
-//             </div>)
-//         ))}
-//     </div>
-// <form onSubmit={sendMessage}>
-// <input type="text"
-// value={newMessage}
-// onChange={ev => setNewMessage(ev.target.value)}
-// <button type=submit> Type Your Message Here </button>
-// </form>
-// )}
-
-{!selectedUserId ? (
+{!selectedUserId && (
     <div>select a user to chat</div>
-  ) : (
+)}
+
+{!!selectedUserId && (
     <div>
-      {messagesWithoutReps.map((message, index) => (
-        <div key={index}>
-          sender: {message.sender}<br/>
-          my id: {id}<br/>
-          {message.text}
-        </div>
-      ))}
-      <form onSubmit={sendMessage}>
-        <input
-          type="text"
-          value={newMessage}
-          onChange={ev => setNewMessage(ev.target.value)}
-        />
-        <button type="submit">Type Your Message Here</button>
-      </form>
+        {messagesWithoutReps.map(message => (
+            <div>
+                sender:{message.sender}<br/>
+                my id:{id}<br/>
+                {message.text}
+            </div>)
+        ))}
     </div>
-  )}
+<form onSubmit={sendMessage}>
+<input type="text"
+value={newMessage}
+onChange={ev => setNewMessage(ev.target.value)}
+<button type=submit> Type Your Message Here </button>
+</form>
+)}
+
