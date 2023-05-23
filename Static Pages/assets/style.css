@@ -32,13 +32,15 @@
   .register h1,
   .user-list-container h1,
   .featured-groups h1,
-  .book-card-info h5 {
+  .book-card-info h5,
+  .error h1 {
     font-family: var(--font-family1-serif);
   }
   
   .hero p,
   .features p,
-  .messages p {
+  .messages p,
+  .error p {
     font-family: var(--font-family2-sans-serif);
   }
   
