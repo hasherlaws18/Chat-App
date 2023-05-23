@@ -11,10 +11,10 @@ const resolvers = {
       // Populate the username subdocument when querying for comments
       return await Comment.find({}).populate("username");
     },
-    genreFeed: async (parents, args) => {
-      // finds the comments associated with a genre to create a blog feed.
-      return await Genre.findById(args.id).populate("comments");
-    },
+    // genreFeed: async (parents, args) => {
+    //   // finds the comments associated with a genre to create a blog feed.
+    //   return await Genre.findById(args.id).populate("comments");
+    // },
   },
 
   // Query: {
@@ -27,21 +27,21 @@ const resolvers = {
   // },
 
   Mutation: {
-    addUser: async (parent, { username, email, password, comments }) => {
+    addUser: async (parent, { username, email, password }) => {
       try {
         // Create and return the new User object
         const newUser = await User.create({
           username,
           email,
           password,
-          comments,
         });
         const token = signToken({
           username,
           email,
           _id: newUser._id,
         });
-        return { token, newUser };
+        console.log(newUser);
+        return { token, user: newUser };
       } catch (error) {
         // Handle any errors that occur during user creation
         throw new Error("Failed to create a new user.");
@@ -49,20 +49,20 @@ const resolvers = {
     },
     addComment: async (parent, { username, Genre, text }) => {
       try {
-        // Create and return the new Comment object
         const newComment = await Comment.create({
           username,
           Genre,
           text,
         });
+
         const token = signToken({
           username,
           Genre,
           text,
         });
+
         return { token, newComment };
       } catch (error) {
-        // Handle any errors that occur during comment creation
         throw new Error("Failed to create a new comment.");
       }
     },

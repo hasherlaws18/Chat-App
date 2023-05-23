@@ -6,17 +6,17 @@ const typeDefs = gql`
     username: String!
     email: String!
     password: String!
-    comments: [Comment]!
+    comments: [Comment]
   }
 
   type Genre {
     _id: ID!
     name: String!
-    comments: [Comment]!
+    comments: [Comment]
   }
 
   type Comment {
-    _id: ID!
+    # _id: ID!
     username: String!
     text: String!
     genre: ID!

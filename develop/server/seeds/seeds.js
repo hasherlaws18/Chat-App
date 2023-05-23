@@ -8,11 +8,11 @@ db.once("open", async () => {
   try {
     await User.deleteMany({});
     await Genre.deleteMany({});
-    await Comment.deleteMany({});
+    // await Comment.deleteMany({});
 
     const users = await User.insertMany(userData);
     const genres = await Genre.insertMany(genreData);
-    const comments = await Comment.insertMany(commentData);
+    // const comments = await Comment.insertMany(commentData);
 
     console.log("all done!");
     process.exit(0);
