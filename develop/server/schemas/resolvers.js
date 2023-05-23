@@ -9,7 +9,10 @@ const resolvers = {
     },
     comments: async () => {
       // Populate the username subdocument when querying for comments
-      return await Comment.find({}).populate("username");
+      return await Comment.find({});
+    },
+    allGenres: async () => {
+      return await Genre.find({});
     },
     // genreFeed: async (parents, args) => {
     //   // finds the comments associated with a genre to create a blog feed.
@@ -51,13 +54,13 @@ const resolvers = {
       try {
         const newComment = await Comment.create({
           username,
-          Genre,
+          genre,
           text,
         });
 
         const token = signToken({
           username,
-          Genre,
+          genre,
           text,
         });
 
