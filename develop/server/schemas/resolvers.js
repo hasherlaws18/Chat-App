@@ -28,16 +28,16 @@ const resolvers = {
         comments: { $exists: true, $ne: [] },
       }).populate({ path: "users", populate: { path: "username" } });
     },
-    classes: async () => {
-      // Populate the professor subdocument when querying for classes
-      return await Class.find({}).populate({
-        path: "professor",
-        populate: { path: "username" },
-      });
-    },
-    professors: async () => {
-      return await Professor.find({});
-    },
+    // classes: async () => {
+    //   // Populate the professor subdocument when querying for classes
+    //   return await Class.find({}).populate({
+    //     path: "professor",
+    //     populate: { path: "username" },
+    //   });
+    // },
+    // professors: async () => {
+    //   return await Professor.find({});
+    // },
   },
 
   Mutation: {
