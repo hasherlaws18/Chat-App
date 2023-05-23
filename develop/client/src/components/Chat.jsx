@@ -52,7 +52,7 @@ useEffect(() => {
     if (selectedUserId) {
         axios.get('/messages/'+selectedUserId)
     }
-})
+});
 
 <div onClick={() => setSelectedUserId(userId)}>
     
