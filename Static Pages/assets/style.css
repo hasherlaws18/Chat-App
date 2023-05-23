@@ -9,11 +9,10 @@
   
   .header,
   .tagline,
-  .footer,
-  .featured-groups {
+  .footer {
     background-color: var(--dkgrey);
   }
-
+  
   .logo {
     max-width: 7vw;
     max-height: 7vw;
@@ -32,15 +31,14 @@
   .login h1,
   .register h1,
   .user-list-container h1,
-  .groups h1,
-  .featured-groups h1 {
+  .featured-groups h1,
+  .book-card-info h5 {
     font-family: var(--font-family1-serif);
   }
   
   .hero p,
   .features p,
-  .messages p,
-  .featured-groups p {
+  .messages p {
     font-family: var(--font-family2-sans-serif);
   }
   
@@ -60,9 +58,3 @@
 .inline-block {
     display: inline-block;
 }
-
-.featured-groups {
-    max-width: 100%;
-    max-height: 400px;
-    width: 100%;
-  }

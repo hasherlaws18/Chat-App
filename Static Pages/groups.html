@@ -17,7 +17,7 @@
         rel="stylesheet">
 </head>
 
-<body class="flex flex-col h-screen justify-between bg-yellow-100">
+<body class="flex flex-col h-screen bg-yellow-100">
 
     <nav class="header border-gray-200 text-white">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
@@ -73,49 +73,143 @@
 
     <main>
         <!-- GROUPS HERO -->
-        <div class="featured-groups grid grid-cols-12 md:items-center w-full max-w-screen-sm md:max-w-screen-md mx-auto px-4">
-            <div class="col-span-12 md:col-span-auto md:col-start-3 md:col-end-6 md:row-start-1 md:row-end-1 -mt-8 md:mt-0 relative z-10 px-0 md:px-0">
-              <div class="p-4 md:p-8 bg-white shadow-lg">
-                <h1 class="max-w-xl mb-4 text-6xl font-extrabold text-center tracking-tight leading-none md:text-5xl xl:text-6xl">
-                  Featured Groups
-                </h1>
-                <p class="mb-2 text-sm text-center text-gray-700">
-                  Explore our favorite groups!
-                </p>
-              </div>
+        <div class="featured-groups bg-yellow-800">
+            <div class="grid grid-cols-12 md:items-center w-full mx-auto">
+                <div
+                    class="col-span-12 md:col-span-auto md:col-start-3 md:col-end-6 md:row-start-1 md:row-end-1 mt-8 md:mt-0 relative z-10 px-0 md:px-0">
+                    <div class="p-4 md:p-8 bg-white shadow-lg">
+                        <h1
+                            class="max-w-xl mb-4 text-6xl font-extrabold text-center tracking-tight leading-none md:text-5xl xl:text-6xl">
+                            Featured Groups
+                        </h1>
+                        <p class="mb-2 text-sm text-center text-gray-700">
+                            Explore our favorite groups!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-auto md:col-start-4 md:col-end-13 md:row-start-1 md:row-end-1">
+                    <a class="" href="#" title="Image Link">
+                        <picture class="relative block w-full h-0 pb bg-gray-300 overflow-hidden shadow-lg"
+                            style="padding-top: 30%;">
+                            <img class="absolute inset-0 w-full h-full object-cover object-center"
+                                src="https://picsum.photos/1000/300?crop=auto"
+                                alt="A random cropped image from Unsplash">
+                        </picture>
+                    </a>
+                </div>
             </div>
-            <div class="col-span-12 md:col-span-auto md:col-start-4 md:col-end-13 md:row-start-1 md:row-end-1">
-              <a class="" href="#" title="Image Link">
-                <picture class="relative block w-full h-0 pb bg-gray-300 overflow-hidden shadow-lg" style="padding-top: 75%;">
-                  <img class="absolute inset-0 w-full h-full object-cover max-h-card-height" src="https://picsum.photos/1000/600" alt="A random image from Unsplash">
-                </picture>
-              </a>
-            </div>
-          </div>
-          
-        
-        
-     <!--GROUPS CARDS  -->
-        
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-    <a href="#">
-        <img class="rounded-t-lg" src="./images/book-placeholder.jpg" alt="" />
-    </a>
-    <div class="p-5">
-        <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Coding</h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700">Non-fiction technical literature aimed at teaching programming concepts, languages, algorithms, and software development practices.</p>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-            Read more
-            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </a>
-    </div>
-</div>
+        </div>
 
-          
-          
- 
+
+        <!-- GROUPS CARDS -->
+        <div class="p-8 max-w-fit book-groups flex flex-wrap justify-center">
+            <div class="p-2 m-2 max-w-xs bg-white border border-gray-400 shadow flex">
+                <div class="book-card flex flex-col justify-center items-center">
+                    <a href="#">
+                        <img class="book-photo" src="./images/book-coding.jpg"
+                            alt="A random cropped image from Unsplash" style="max-height: 275px;" />
+                    </a>
+                    <div class="book-card-info p-5 text-center">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Coding</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700">Non-fiction technical literature aimed at teaching
+                            programming concepts, languages, algorithms, and software development practices.</p>
+                        <a href="#"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-800 hover:bg-yellow-900 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300">
+                            Read more
+                            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 m-2 max-w-xs bg-white border border-gray-400 shadow flex">
+                <div class="book-card flex flex-col justify-center items-center">
+                    <a href="#">
+                        <img class="book-photo" src="./images/book-self-help.jpg"
+                            alt="A random cropped image from Unsplash" style="max-height: 275px;" />
+                    </a>
+                    <div class="book-card-info p-5 text-center">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Self Help</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700">Written resources that offer guidance and strategies
+                            for personal growth, empowerment, and improvement.</p>
+                        <a href="#"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-800 hover:bg-yellow-900 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300">
+                            Read more
+                            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 m-2 max-w-xs bg-white border border-gray-400 shadow flex">
+                <div class="book-card flex flex-col justify-center items-center">
+                    <a href="#">
+                        <img class="book-photo" src="./images/book-sci-fi.jpg"
+                            alt="A random cropped image from Unsplash" style="max-height: 275px;" />
+                    </a>
+                    <div class="book-card-info p-5 text-center">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Sci Fi</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700">Imaginative narratives that explore speculative
+                            concepts, futuristic technologies, and otherworldly settings to examine the impact of
+                            science and technology on society and individuals.</p>
+                        <a href="#"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-800 hover:bg-yellow-900 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300">
+                            Read more
+                            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 m-2 max-w-xs bg-white border border-gray-400 shadow flex">
+                <div class="book-card flex flex-col justify-center items-center">
+                    <a href="#">
+                        <img class="book-photo" src="./images/book-mystery.jpg"
+                            alt="A random cropped image from Unsplash" style="max-height: 275px;" />
+                    </a>
+                    <div class="book-card-info p-5 text-center">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Mystery Thriller</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700">Engaging narratives that involve suspenseful plot
+                            twists, complex characters, and intriguing mysteries to keep readers hooked until the end.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-800 hover:bg-yellow-900 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300">
+                            Read more
+                            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
     <!-- FOOTER -->
     <footer class="footer py-8 px-4 sm:px-6 lg:px-8">
