@@ -1,0 +1,183 @@
+[
+    {
+      "_id": "1",
+      "username": "john_doe",
+      "text": "The futuristic world-building is amazing!",
+      "genre": "1"
+    },
+    {
+      "_id": "2",
+      "username": "jane_smith",
+      "text": "This sci-fi novel explores fascinating scientific concepts.",
+      "genre": "1"
+    },
+    {
+      "_id": "3",
+      "username": "mike_jones",
+      "text": "The self-help advice in this book is life-changing.",
+      "genre": "2"
+    },
+    {
+      "_id": "4",
+      "username": "sarah_wilson",
+      "text": "I found the practical exercises in this self-help book very helpful.",
+      "genre": "2"
+    },
+    {
+      "_id": "5",
+      "username": "alex_brown",
+      "text": "The coding examples in this book are clear and concise.",
+      "genre": "3"
+    },
+    {
+      "_id": "6",
+      "username": "emily_taylor",
+      "text": "As a programmer, I appreciate the coding tips shared in this book.",
+      "genre": "3"
+    },
+    {
+      "_id": "7",
+      "username": "david_smith",
+      "text": "The mystery in this book kept me guessing until the very end.",
+      "genre": "4"
+    },
+    {
+      "_id": "8",
+      "username": "laura_jones",
+      "text": "I love how the clues in this mystery novel are cleverly woven together.",
+      "genre": "4"
+    },
+    {
+      "_id": "9",
+      "username": "ryan_davis",
+      "text": "The sci-fi elements in this book are mind-bending and imaginative.",
+      "genre": "1"
+    },
+    {
+      "_id": "10",
+      "username": "amanda_miller",
+      "text": "The self-help strategies in this book have helped me overcome challenges.",
+      "genre": "2"
+    },
+    {
+      "_id": "11",
+      "username": "mark_johnson",
+      "text": "The coding techniques shared in this book have improved my programming skills.",
+      "genre": "3"
+    },
+    {
+      "_id": "12",
+      "username": "jessica_wilson",
+      "text": "I love how this mystery book kept me on the edge of my seat.",
+      "genre": "4"
+    },
+    {
+      "_id": "13",
+      "username": "andrew_smith",
+      "text": "The sci-fi world in this book is so vividly described that I felt transported.",
+      "genre": "1"
+    },
+    {
+      "_id": "14",
+      "username": "olivia_jones",
+      "text": "The self-help advice in this book has empowered me to make positive changes.",
+      "genre": "2"
+    },
+    {
+      "_id": "15",
+      "username": "benjamin_davis",
+      "text": "The coding concepts explained in this book are beginner-friendly and practical.",
+      "genre": "3"
+    },
+    {
+      "_id": "16",
+      "username": "natalie_brown",
+      "text": "I couldn't stop turning the pages of this gripping mystery novel.",
+      "genre": "4"
+    },
+    {
+      "_id": "17",
+      "username": "john_doe",
+      "text": "The sci-fi themes in this book make you ponder the future of technology.",
+      "genre": "1"
+    },
+    {
+      "_id": "18",
+      "username": "jane_smith",
+      "text": "The self-help strategies in this book have improved my mindset and well-being.",
+      "genre": "2"
+    },
+    {
+      "_id": "19",
+      "username": "mike_jones",
+      "text": "The coding examples in this book have expanded my programming knowledge.",
+      "genre": "3"
+    },
+    {
+      "_id": "20",
+      "username": "sarah_wilson",
+      "text": "I love unraveling the mysteries in this book. The plot twists are brilliant.",
+      "genre": "4"
+    },
+    {
+      "_id": "21",
+      "username": "alex_brown",
+      "text": "The sci-fi concepts in this book are thought-provoking and imaginative.",
+      "genre": "1"
+    },
+    {
+      "_id": "22",
+      "username": "emily_taylor",
+      "text": "The self-help advice in this book has had a positive impact on my life.",
+      "genre": "2"
+    },
+    {
+      "_id": "23",
+      "username": "david_smith",
+      "text": "The coding challenges in this book have improved my problem-solving skills.",
+      "genre": "3"
+    },
+    {
+      "_id": "24",
+      "username": "laura_jones",
+      "text": "The mystery elements in this book are cleverly crafted and suspenseful.",
+      "genre": "4"
+    },
+    {
+      "_id": "25",
+      "username": "ryan_davis",
+      "text": "This sci-fi book is a thrilling adventure that kept me hooked from start to finish.",
+      "genre": "1"
+    },
+    {
+      "_id": "26",
+      "username": "amanda_miller",
+      "text": "The self-help exercises in this book have helped me develop a growth mindset.",
+      "genre": "2"
+    },
+    {
+      "_id": "27",
+      "username": "mark_johnson",
+      "text": "The coding tips and tricks in this book have enhanced my programming efficiency.",
+      "genre": "3"
+    },
+    {
+      "_id": "28",
+      "username": "jessica_wilson",
+      "text": "The mystery in this book had me guessing until the very end. A thrilling read!",
+      "genre": "4"
+    },
+    {
+      "_id": "29",
+      "username": "andrew_smith",
+      "text": "I'm fascinated by the sci-fi concepts presented in this book. Truly imaginative.",
+      "genre": "1"
+    },
+    {
+      "_id": "30",
+      "username": "olivia_jones",
+      "text": "The self-help guidance in this book has inspired me to pursue personal growth.",
+      "genre": "2"
+    }
+  ]
+  

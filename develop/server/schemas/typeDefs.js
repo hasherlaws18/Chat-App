@@ -1,47 +1,44 @@
 const { gql } = require("apollo-server-express");
 
-// const typeDefs = gql`
-//   type Book {
-//     authors: [String]!
-//     description: String!
-//     bookId: String!
-//     image: String
-//     link: String
-//     title: String!
-//   }
+const typeDefs = gql`
+  type User {
+    _id: ID!
+    username: String!
+    email: String!
+    password: String!
+    comments: [Comment]!
+  }
 
-//   type User {
-//     _id: ID!
-//     username: String!
-//     email: String!
-//     password: String!
-//     savedBooks: [Book]!
-//     bookCount: Int!
-//   }
+  type Genre {
+    _id: ID!
+    name: String!
+    comments: [Comment]!
+  }
 
-//   type Auth {
-//     token: ID!
-//     user: User
-//   }
+  type Comment {
+    _id: ID!
+    username: String!
+    text: String!
+    genre: ID!
+  }
 
-//   type Query {
-//     me(userId: ID!): User
-//   }
+  type Auth {
+    token: ID!
+    user: User
+  }
 
-//   type Mutation {
-//     addUser(username: String!, email: String!, password: String!): Auth
-//     loginUser(email: String!, password: String!): Auth
-//     saveBook(
-//       userId: ID!
-//       authors: [String]!
-//       description: String!
-//       bookId: String!
-//       image: String
-//       link: String
-//       title: String
-//     ): User
-//     removeBook(userId: ID!, bookId: String!): User
-//   }
-// `;
+  type Query {
+    users: [User]
+    genres: [Genre]
+    comments: [Comment]
+    Genre(_id: ID!): Genre
+  }
+
+  type Mutation {
+    addUser(username: String!, email: String!, password: String!): Auth
+    loginUser(email: String!, password: String!): Auth
+    addComment(username: String!, Genre: ID!, text: String!): Comment
+  }
+`;
 
 module.exports = typeDefs;
