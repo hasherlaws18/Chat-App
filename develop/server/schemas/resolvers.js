@@ -50,7 +50,7 @@ const resolvers = {
         throw new Error("Failed to create a new user.");
       }
     },
-    addComment: async (parent, { username, Genre, text }) => {
+    addComment: async (parent, { username, genre, text }) => {
       try {
         const newComment = await Comment.create({
           username,
@@ -58,14 +58,10 @@ const resolvers = {
           text,
         });
 
-        const token = signToken({
-          username,
-          genre,
-          text,
-        });
-
-        return { token, newComment };
+        console.log(newComment);
+        return newComment;
       } catch (error) {
+        console.log(error);
         throw new Error("Failed to create a new comment.");
       }
     },
