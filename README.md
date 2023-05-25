@@ -36,24 +36,18 @@ SO THAT I can engage in conversation, share my thoughts and ideas, and view othe
 
 ## Acceptance Criteria
 
-GIVEN I am using my web browser to find a community of people who share my interests
+GIVEN I am using my web browser to find a community of people who share my literature interests
 WHEN I open Lit Chat
 THEN I am welcomed on the home screen
 
-WHEN
-THEN
+WHEN I am logged in
+THEN I can securely post comments on a genre feed
 
-WHEN
-THEN
+WHEN If I am not logged in
+THEN I am redirected to a register page
 
-WHEN
-THEN
-
-WHEN
-THEN
-
-WHEN
-THEN
+WHEN I view a genre page
+THEN I am presented with a feed of comments displayed chronologically, creating a coherent conversation about the topic
 
 ## Wireframes and Mock-Ups
 
