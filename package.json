@@ -7,7 +7,7 @@
     "develop": "concurrently \"cd Main && cd server && npm run watch\" \"cd Main && cd client && npm start\"",    
     "install": "cd Main && cd server && npm i && cd ../client && npm i",    
     "seed": "cd Main && cd server && npm run seed",    
-    "build": "cd client && npm run build"  },  
+    "build": "cd Main && cd client && npm run build"  },  
     "keywords": [],  
     "author": "",  
     "license": "ISC",  
