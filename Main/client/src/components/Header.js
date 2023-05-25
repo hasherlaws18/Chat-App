@@ -1,7 +1,6 @@
 import React from 'react';
 import '../style.css';
 import logoImg from '../images/LitChat_Logo-removebg.png';
-import { Link } from 'react-router-dom';
 
 // Here we are using object destructuring assignment to pluck off our variables from the props object
 // We assign them to their own variable names
@@ -10,10 +9,10 @@ function Header({ currentPage, handlePageChange }) {
   return (
     <nav className="header border-gray-200 text-white">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
-        <Link to="/" className="flex items-center logo">
+      <a href="/" className="flex items-center logo">
           <img src={logoImg} className="h-12 w-12 mr-3" alt="LitChat Logo" />
           <span className="self-center text-3xl font-semibold whitespace-nowrap">LitChat</span>
-        </Link>
+        </a>
         <div className="relative mx-auto text-gray-600 lg:block hidden">
           <input
             className="border-2 border-yellow-500 bg-white h-10 w-96 pl-2 pr-8 rounded-lg text-sm focus:outline-none"
@@ -64,8 +63,7 @@ function Header({ currentPage, handlePageChange }) {
         >
           <ul className="py-2 text-sm text-gray-700" aria-labelledby="menuButton">
             <li>
-              <Link
-                to="#home"
+              <a href="#home"
                 onClick={() => handlePageChange('Home')}
                 // This is a conditional (ternary) operator that checks to see if the current page is "Home"
                 // If it is, we set the current page to 'active', otherwise we set it to 'nav-link'
@@ -74,11 +72,10 @@ function Header({ currentPage, handlePageChange }) {
                 }`}
               >
                 Dashboard
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="#groups"
+              <a href="#groups"
                 onClick={() => handlePageChange('Groups')}
                 // Check to see if the currentPage is `Groups`, and if so we use the active link class. Otherwise, we set it to a normal nav-link
                   className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${
@@ -86,11 +83,10 @@ function Header({ currentPage, handlePageChange }) {
                 }`}
               >
                 Groups
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="#messages"
+              <a href="#messages"
                 onClick={() => handlePageChange('Messages')}
                 // Check to see if the currentPage is `Messages`, and if so we use the active link class. Otherwise, we set it to a normal nav-link
                 className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${
@@ -98,12 +94,11 @@ function Header({ currentPage, handlePageChange }) {
                 }`}
               >
                 Messages
-              </Link>
+              </a>
             </li>
           </ul>
           <div className="py-2">
-            <Link
-              to="#login"
+            <a href="#login"
               onClick={() => handlePageChange('Login')}
               // Check to see if the currentPage is `Login`, and if so we use the active link class. Otherwise, we set it to a normal nav-link
                 className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white ${
@@ -111,7 +106,7 @@ function Header({ currentPage, handlePageChange }) {
               }`}
             >
               Log In
-            </Link>
+            </a>
           </div>
         </div>
       </div>
