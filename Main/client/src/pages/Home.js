@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/style.css';
+import '../style.css';
 import HeroImg from '../images/hero.jpg';
 import FeatureOne from '../images/feature-01-sm.png';
 import FeatureTwo from '../images/feature-02-sm.png';

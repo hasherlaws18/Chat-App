@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/style.css';
-import GroupHero from '../images/featured-groups.jpg';
+import '../style.css';
+import GroupHero from '../images/featured-groups.jpeg';
 import BookCoding from '../images/book-coding.jpg';
 import BookMystery from '../images/book-mystery.jpg';
 import BookSciFi from '../images/book-sci-fi.jpg';

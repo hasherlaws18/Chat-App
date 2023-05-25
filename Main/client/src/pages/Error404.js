@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/style.css';
-import Error404Image from '../images/Error404.png';
+import '../style.css';
+import Error404Image from '../images/404.png';
 
 export default function Error404() {
   return (
