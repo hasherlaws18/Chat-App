@@ -1,17 +1,12 @@
 import React from 'react';
 import '../style.css';
 import logoImg from '../images/LitChat_Logo-removebg.png';
-import { loadGoogleFonts } from 'google-fonts';
-
-// Here we are using object destructuring assignment to pluck off our variables from the props object
-// We assign them to their own variable names
-loadGoogleFonts('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Open+Sans&display=swap');
 
 function Header({ currentPage, handlePageChange }) {
   return (
     <nav className="header border-gray-200 text-white">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
-      <a href="/" className="flex items-center logo">
+        <a href="/" className="flex items-center logo">
           <img src={logoImg} className="h-12 w-12 mr-3" alt="LitChat Logo" />
           <span className="self-center text-3xl font-semibold whitespace-nowrap">LitChat</span>
         </a>
