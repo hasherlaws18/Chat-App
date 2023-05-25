@@ -1,19 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../style.css';
 import logoImg from '../images/LitChat_Logo-removebg.png';
 import { Link } from 'react-router-dom';
 
-// Here we are using object destructuring assignment to pluck off our variables from the props object
-// We assign them to their own variable names
-
 function Header({ currentPage, handlePageChange }) {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   return (
     <nav className="header border-gray-200 text-white">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
-        <Link to="/" className="flex items-center logo">
+        <a href="/" className="flex items-center logo">
           <img src={logoImg} className="h-12 w-12 mr-3" alt="LitChat Logo" />
           <span className="self-center text-3xl font-semibold whitespace-nowrap">LitChat</span>
-        </Link>
+        </a>
         <div className="relative mx-auto text-gray-600 lg:block hidden">
           <input
             className="border-2 border-yellow-500 bg-white h-10 w-96 pl-2 pr-8 rounded-lg text-sm focus:outline-none"
@@ -30,7 +29,7 @@ function Header({ currentPage, handlePageChange }) {
               x="0px"
               y="0px"
               viewBox="0 0 56.966 56.966"
-              style={{ enableBackground: 'new 0 0 56.966 56.966'}}
+              style={{ enableBackground: 'new 0 0 56.966 56.966' }}
               width="512px"
               height="512px"
             >
@@ -42,7 +41,7 @@ function Header({ currentPage, handlePageChange }) {
         </div>
         <button
           id="menuButton"
-          data-dropdown-toggle="dropdownDivider"
+          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           className="text-white hover:bg-yellow-800 focus:ring-2 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
           type="button"
         >
@@ -60,56 +59,43 @@ function Header({ currentPage, handlePageChange }) {
         </button>
         <div
           id="dropdownDivider"
-          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+          className={`z-10 ${isDropdownOpen ? 'block' : 'hidden'} bg-white divide-y divide-gray-100 rounded-lg shadow w-44 absolute top-10 right-4`}
         >
-          <ul className="py-2 text-sm text-gray-700" aria-labelledby="menuButton">
+          <ul className="p-0 m-0 py-2 text-sm text-gray-700" aria-labelledby="menuButton">
             <li>
-              <Link
-                to="#home"
+              <a href="#home"
                 onClick={() => handlePageChange('Home')}
                 // This is a conditional (ternary) operator that checks to see if the current page is "Home"
                 // If it is, we set the current page to 'active', otherwise we set it to 'nav-link'
-                          className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${
-                  currentPage === 'Home' ? 'nav-link active' : 'nav-link'
-                }`}
+                className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${currentPage === 'Home' ? 'nav-link active' : 'nav-link'
+                  }`}
               >
                 Dashboard
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="#groups"
+              <a href="#groups"
                 onClick={() => handlePageChange('Groups')}
                 // Check to see if the currentPage is `Groups`, and if so we use the active link class. Otherwise, we set it to a normal nav-link
-                  className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${
-                  currentPage === 'Groups' ? 'nav-link active' : 'nav-link'
-                }`}
+                className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${currentPage === 'Groups' ? 'nav-link active' : 'nav-link'
+                  }`}
               >
                 Groups
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="#messages"
+              <a href="#messages"
                 onClick={() => handlePageChange('Messages')}
                 // Check to see if the currentPage is `Messages`, and if so we use the active link class. Otherwise, we set it to a normal nav-link
-                className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${
-                currentPage === 'Messages' ? 'nav-link active' : 'nav-link'
-                }`}
+                className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${currentPage === 'Messages' ? 'nav-link active' : 'nav-link'
+                  }`}
               >
                 Messages
-              </Link>
+              </a>
             </li>
           </ul>
           <div className="py-2">
-            <Link
-              to="#login"
-              onClick={() => handlePageChange('Login')}
-              // Check to see if the currentPage is `Login`, and if so we use the active link class. Otherwise, we set it to a normal nav-link
-                className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white ${
-                currentPage === 'Login' ? 'nav-link active' : 'nav-link'
-              }`}
-            >
+            <Link to="/ Login" className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white ${currentPage === 'Login' ? 'nav-link active' : 'nav-link'}`}>
               Log In
             </Link>
           </div>
