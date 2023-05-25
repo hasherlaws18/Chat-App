@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../style.css';
 import logoImg from '../images/LitChat_Logo-removebg.png';
 
 function Header({ currentPage, handlePageChange }) {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   return (
     <nav className="header border-gray-200 text-white">
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
@@ -26,7 +28,7 @@ function Header({ currentPage, handlePageChange }) {
               x="0px"
               y="0px"
               viewBox="0 0 56.966 56.966"
-              style={{ enableBackground: 'new 0 0 56.966 56.966'}}
+              style={{ enableBackground: 'new 0 0 56.966 56.966' }}
               width="512px"
               height="512px"
             >
@@ -38,7 +40,7 @@ function Header({ currentPage, handlePageChange }) {
         </div>
         <button
           id="menuButton"
-          data-dropdown-toggle="dropdownDivider"
+          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           className="text-white hover:bg-yellow-800 focus:ring-2 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
           type="button"
         >
@@ -56,17 +58,16 @@ function Header({ currentPage, handlePageChange }) {
         </button>
         <div
           id="dropdownDivider"
-          className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+          className={`z-10 ${isDropdownOpen ? 'block' : 'hidden'} bg-white divide-y divide-gray-100 rounded-lg shadow w-44 absolute top-10 right-4`}
         >
-          <ul className="py-2 text-sm text-gray-700" aria-labelledby="menuButton">
+          <ul className="p-0 m-0 py-2 text-sm text-gray-700" aria-labelledby="menuButton">
             <li>
               <a href="#home"
                 onClick={() => handlePageChange('Home')}
                 // This is a conditional (ternary) operator that checks to see if the current page is "Home"
                 // If it is, we set the current page to 'active', otherwise we set it to 'nav-link'
-                          className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${
-                  currentPage === 'Home' ? 'nav-link active' : 'nav-link'
-                }`}
+                className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${currentPage === 'Home' ? 'nav-link active' : 'nav-link'
+                  }`}
               >
                 Dashboard
               </a>
@@ -75,9 +76,8 @@ function Header({ currentPage, handlePageChange }) {
               <a href="#groups"
                 onClick={() => handlePageChange('Groups')}
                 // Check to see if the currentPage is `Groups`, and if so we use the active link class. Otherwise, we set it to a normal nav-link
-                  className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${
-                  currentPage === 'Groups' ? 'nav-link active' : 'nav-link'
-                }`}
+                className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${currentPage === 'Groups' ? 'nav-link active' : 'nav-link'
+                  }`}
               >
                 Groups
               </a>
@@ -86,9 +86,8 @@ function Header({ currentPage, handlePageChange }) {
               <a href="#messages"
                 onClick={() => handlePageChange('Messages')}
                 // Check to see if the currentPage is `Messages`, and if so we use the active link class. Otherwise, we set it to a normal nav-link
-                className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${
-                currentPage === 'Messages' ? 'nav-link active' : 'nav-link'
-                }`}
+                className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${currentPage === 'Messages' ? 'nav-link active' : 'nav-link'
+                  }`}
               >
                 Messages
               </a>
@@ -98,9 +97,8 @@ function Header({ currentPage, handlePageChange }) {
             <a href="#login"
               onClick={() => handlePageChange('Login')}
               // Check to see if the currentPage is `Login`, and if so we use the active link class. Otherwise, we set it to a normal nav-link
-                className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white ${
-                currentPage === 'Login' ? 'nav-link active' : 'nav-link'
-              }`}
+              className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white ${currentPage === 'Login' ? 'nav-link active' : 'nav-link'
+                }`}
             >
               Log In
             </a>
