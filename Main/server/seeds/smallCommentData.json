@@ -1,0 +1,26 @@
+[
+    {
+      "_id": "609d76d55b1e694d2bda1031",
+      "username": "john_doe",
+      "text": "The futuristic world-building is amazing!",
+      "genre": "609d76d55b1e694d2bda102d"
+    },
+    {
+      "_id": "609d76d55b1e694d2bda1032",
+      "username": "jane_smith",
+      "text": "This sci-fi novel explores fascinating scientific concepts.",
+      "genre": "609d76d55b1e694d2bda102d"
+    },
+    {
+      "_id": "609d76d55b1e694d2bda1033",
+      "username": "mike_jones",
+      "text": "The self-help advice in this book is life-changing.",
+      "genre": "609d76d55b1e694d2bda102e"
+    },
+    {
+        "_id": "609d76d55b1e694d2bda1034",
+        "username": "mike_jones",
+        "text": "I found the practical exercises in this self-help book very helpful.",
+        "genre": "609d76d55b1e694d2bda102e"
+      }
+]
