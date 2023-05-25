@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/style.css';
+import '../style.css';
 import PortraitPH from '../images/Portrait_Placeholder.png';
 import GroupsPhoto from '../images/groups-photo.jpg'
 

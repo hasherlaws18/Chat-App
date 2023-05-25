@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import Home from './pages/Home';
-import Groups from '.pages/Groups';
-import Messages from '.pages/Messages';
-import Login from '.pages/Login';
-import Register from '.pages/Register';
-import Error404 from '.pages/Error404'
-import './styles/style.css';
+import Home from '../pages/Home';
+import Groups from '../pages/Groups';
+import Messages from '../pages/Messages';
+import Login from '../pages/Login';
+import Register from '../pages/Register';
+import Error404 from '../pages/Error404'
+import '../style.css';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 export default function LitChatContainer() {

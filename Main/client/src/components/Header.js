@@ -1,6 +1,7 @@
 import React from 'react';
-import './styles/style.css';
-import logoImg from './images/LitChat_Logo-removebg.png';
+import '../style.css';
+import logoImg from '../images/LitChat_Logo-removebg.png';
+import { Link } from 'react-router-dom';
 
 // Here we are using object destructuring assignment to pluck off our variables from the props object
 // We assign them to their own variable names
@@ -29,8 +30,7 @@ function Header({ currentPage, handlePageChange }) {
               x="0px"
               y="0px"
               viewBox="0 0 56.966 56.966"
-              style="enable-background:new 0 0 56.966 56.966;"
-              xml:space="preserve"
+              style={{ enableBackground: 'new 0 0 56.966 56.966'}}
               width="512px"
               height="512px"
             >
