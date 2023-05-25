@@ -8,7 +8,7 @@ const genreSchema = new Schema(
             required: true,
             unique: true,
         },
-        comments: [commentSchema],
+        comments: [],
     
     },
 
