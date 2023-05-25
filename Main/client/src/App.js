@@ -1,7 +1,13 @@
 import React from 'react';
+import LitChatContainer from './components/LitChatContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import LitChatContainer from "./components/LitChatContainer.js";
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<LitChatContainer />} />
+    </Routes>
+  </BrowserRouter>
+);
 
-const App = () => <LitChatContainer />;
-  
-  export default App;
+export default App;
