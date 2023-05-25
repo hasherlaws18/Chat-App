@@ -4,7 +4,7 @@
 
 1.[Description and Purpose](#description)
 
-2.[User Story](#userStory)
+2.[User Story](#UserStory)
 
 3.[Acceptance Criteria](#acceptanceCriteria)
 
@@ -24,13 +24,36 @@
 
 ## Description
 
-Lit Chat is a website where users can come together to discuss their ideas about their favorite literature
+Lit Chat is a website where users can come together to discuss their favorite literature.
 
-The application is intended to allows people to have a book club even if there aren't any folks in their area who enjoy the same books that they do.
+The application is intended to allows people to have a book club and sense of community and shared interest, even if there aren't any folks in their area who share the same interests.
 
 ## User Story
 
+AS A person interested in literature
+I WANT to communicate with a community of people who share my interests
+SO THAT I can engage in conversation, share my thoughts and ideas, and view other peoples' thoughts and ideas.
+
 ## Acceptance Criteria
+
+GIVEN I am using my web browser to find a community of people who share my interests
+WHEN I open Lit Chat
+THEN I am welcomed on the home screen
+
+WHEN
+THEN
+
+WHEN
+THEN
+
+WHEN
+THEN
+
+WHEN
+THEN
+
+WHEN
+THEN
 
 ## Wireframes and Mock-Ups
 
@@ -46,14 +69,17 @@ The application is intended to allows people to have a book club even if there a
 - JavaScript
 - Node.js
 - Express.js
+- JSX
+- MongoDB and Mongoose
+- Apollo
 
 ## Usage
 
-View the deployed page at [Lit Chat]("heroku link here").
+View the deployed page at [Lit Chat]("heroku link here"). Navigate to "heroku URL", create a profile, and start chatting!
 
 ## Contribution
 
-You can contribute to this application by opening a pull request at github.com/hasherlaws18/Chat-App. Currently there are no rules or standards for contribution.
+You can contribute to this application by opening a pull request at github.com/hasherlaws18/Chat-App. Currently there are no rules or standards for contributions. Our first suggestion is to add a Genre if what you would like to discuss isn't available. What do you feel strongly about? Create the first comment on your new Genre to start the discussion!
 
 ## License
 
@@ -62,7 +88,7 @@ This application is licensed under the MIT license.
 
 ## Questions
 
-Known erros and other issues can be raised to the repository on github at github.com/hasherlaws18/Chat-App , or can be sent to my github profile at github.com/hasherlaws18. As last resort, questions can be emailed to me directly at alanhornbaker@gmail.com.
+Known erros and other issues can be raised to the repository on github at github.com/hasherlaws18/Chat-App , or can be sent to github.com/hasherlaws18. As last resort, questions can be emailed directly to alanhornbaker@gmail.com.
 
 ## Credits
 
@@ -70,17 +96,3 @@ Known erros and other issues can be raised to the repository on github at github
 - [hasherlaws18](https://github.com/hasherlaws18)
 - [Matin Tavacoli](https://github.com/mtavacoli)
 - [Danielle Leaton-Salinas](https://github.com/dleatonsalinas)
-
-## Table of Contents
-
-## Usage
-
-Navigate to "heroku URL", create a profile, and start chatting!
-
-## Contributing
-
-Pull requests can be made to https://github.com/hasherlaws18/Chat-App.
-
-## Questions
-
-If you have any questions about the repo, please [open an issue](https://github.com/hasherlaws18/Chat-App/issues) or contact me via email at alanhornbaker@gmail.com. You can find more of my work on my GitHub, [hasherlaws18](https://github.com/hasherlaws18/).

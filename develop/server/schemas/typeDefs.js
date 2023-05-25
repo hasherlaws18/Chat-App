@@ -6,20 +6,20 @@ const typeDefs = gql`
     username: String!
     email: String!
     password: String!
-    comments: [Comment]!
+    comments: [Comment]
   }
 
   type Genre {
     _id: ID!
     name: String!
-    comments: [Comment]!
+    comments: [Comment]
   }
 
   type Comment {
     _id: ID!
     username: String!
     text: String!
-    genre: ID!
+    genre: String!
   }
 
   type Auth {
@@ -28,7 +28,8 @@ const typeDefs = gql`
   }
 
   type Query {
-    users: [User]
+    allUsers: [User]
+    allGenres: [Genre]
     genres: [Genre]
     comments: [Comment]
     Genre(_id: ID!): Genre

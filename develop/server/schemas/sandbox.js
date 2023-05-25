@@ -6,3 +6,8 @@ query genreFeed($_id: ID!) {
         comments
     }
 }
+
+mutation adduser($username, $email, $password)... 
+    addUser($username, $email, $password) {
+        
+    }
