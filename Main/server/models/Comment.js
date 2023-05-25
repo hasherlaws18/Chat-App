@@ -1,24 +1,21 @@
-const {Schema, model} = require('mongoose');
-// const Genre = require('./Genre')
+const { Schema, model } = require("mongoose");
 
-const commentSchema = new Schema(
-    {
-        username: {
-            type: String,
-            required: true,
-            unique: true,
-        },
+const commentSchema = new Schema({
+  username: {
+    type: String,
+    required: true,
+  },
+  text: {
+    type: String,
+    required: true,
+  },
+  genre: {
+    type: Schema.Types.ObjectId,
+    ref: "Genre",
+    required: true,
+  },
+});
 
-        text: {
-            type: String,
-            required: true,
-        },
-        comments: [],
+const Comment = model("Comment", commentSchema);
 
-    },
-   
-);
-
-const Comment = model('Comment', commentSchema);
-
-module.exports = Comment
+module.exports = Comment;

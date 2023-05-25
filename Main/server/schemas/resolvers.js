@@ -4,82 +4,68 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    users: async () => {
-      // Populate the users and username subdocuments when querying for schools
-      return await User.find({}).populate("users").populate({
-        path: "users",
-        populate: "username",
-      });
+    allUsers: async () => {
+      return await User.find({});
     },
     comments: async () => {
       // Populate the username subdocument when querying for comments
-      return await Comment.find({}).populate("username");
+      return await Comment.find({});
     },
-    genreFeed: async (parents, args) => {
-      // finds the comments associated with a genre to create a blog feed.
-      return await Genre.findById(args.id).populate("comments");
+    allGenres: async () => {
+      return await Genre.find({});
     },
+    // genreFeed: async (parents, args) => {
+    //   // finds the comments associated with a genre to create a blog feed.
+    //   return await Genre.findById(args.id).populate("comments");
+    // },
   },
 
-  Query: {
-    users: async () => {
-      // Search for a Genre with associated comments and populate 'users' and 'username' fields
-      return await Genre.find({
-        comments: { $exists: true, $ne: [] },
-      }).populate({ path: "users", populate: { path: "username" } });
-    },
-    // classes: async () => {
-    //   // Populate the professor subdocument when querying for classes
-    //   return await Class.find({}).populate({
-    //     path: "professor",
-    //     populate: { path: "username" },
-    //   });
-    // },
-    // professors: async () => {
-    //   return await Professor.find({});
-    // },
-  },
+  // Query: {
+  //   users: async () => {
+  //     // Search for a Genre with associated comments and populate 'users' and 'username' fields
+  //     return await Genre.find({
+  //       comments: { $exists: true, $ne: [] },
+  //     }).populate({ path: "users", populate: { path: "username" } });
+  //   },
+  // },
 
   Mutation: {
-    addUser: async (parent, { username, email, password, comments }) => {
+    addUser: async (parent, { username, email, password }) => {
       try {
         // Create and return the new User object
         const newUser = await User.create({
           username,
           email,
           password,
-          comments,
         });
         const token = signToken({
           username,
           email,
           _id: newUser._id,
         });
-        return { token, newUser };
+        console.log(newUser);
+        return { token, user: newUser };
       } catch (error) {
         // Handle any errors that occur during user creation
         throw new Error("Failed to create a new user.");
       }
     },
+    addComment: async (parent, { username, genre, text }) => {
+      try {
+        const newComment = await Comment.create({
+          username,
+          genre,
+          text,
+        });
+
+        console.log(newComment);
+        return newComment;
+      } catch (error) {
+        console.log(error);
+        throw new Error("Failed to create a new comment.");
+      }
+    },
   },
 };
-
-// Mutation: {
-//   addUser: async (_, { user }) => {
-//     const newUser = await User.create(user);
-//     const token = signToken(user);
-//     return { token, newUser };
-//   },
-// },
-
-// Query: {
-//   me: async (_, { userID }, context) => {
-//     const user = await User.findById(userID).populate("Genre");
-//     if (!user) {
-//       throw new AuthenticationError("No user found with this id");
-//     }
-//     return user;
-//   },
-// },
 
 module.exports = resolvers;

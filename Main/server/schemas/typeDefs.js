@@ -6,20 +6,20 @@ const typeDefs = gql`
     username: String!
     email: String!
     password: String!
-    comments: [Comment]!
+    comments: [Comment]
   }
 
   type Genre {
     _id: ID!
     name: String!
-    comments: [Comment]!
+    comments: [Comment]
   }
 
   type Comment {
     _id: ID!
     username: String!
     text: String!
-    genre: ID!
+    genre: String!
   }
 
   type Auth {
@@ -28,16 +28,18 @@ const typeDefs = gql`
   }
 
   type Query {
-    users: [User]
+    allUsers: [User]
+    allGenres: [Genre]
     genres: [Genre]
     comments: [Comment]
-    Genre(_id: ID!): Genre
+    comment(commentId: ID!): Comment
+    genre(_id: ID!): Genre
   }
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     loginUser(email: String!, password: String!): Auth
-    addComment(username: String!, Genre: ID!, text: String!): Comment
+    addComment(username: String!, genre: ID!, text: String!): Comment
   }
 `;
 
