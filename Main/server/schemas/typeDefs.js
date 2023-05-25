@@ -1,6 +1,9 @@
 const { gql } = require("apollo-server-express");
+const { GraphQLDateTime } = require("graphql-iso-date");
 
 const typeDefs = gql`
+  scalar GraphQLDateTime
+
   type User {
     _id: ID!
     username: String!
@@ -20,6 +23,7 @@ const typeDefs = gql`
     username: String!
     text: String!
     genre: String!
+    createdAt: GraphQLDateTime
   }
 
   type Auth {
