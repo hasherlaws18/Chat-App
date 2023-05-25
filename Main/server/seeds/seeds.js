@@ -17,7 +17,7 @@ const seedDatabase = async () => {
 
       // Populate comments for each genre
       for (const comment of comments) {
-        const genre = genres.find((g) => g.name === comment.genre);
+        const genre = genres.find((g) => g._id.toString() === comment.genre);
         if (genre) {
           genre.comments.push(comment._id);
           await genre.save();
