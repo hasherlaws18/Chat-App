@@ -56,6 +56,7 @@ const resolvers = {
           username,
           genre,
           text,
+          createdAt: new Date(),
         });
 
         console.log(newComment);

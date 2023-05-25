@@ -4,20 +4,33 @@ const userData = require("./userData.json");
 const commentData = require("./commentData.json");
 const genreData = require("./genreData.json");
 
-db.once("open", async () => {
+const seedDatabase = async () => {
   try {
-    await User.deleteMany({});
-    await Genre.deleteMany({});
-    await Comment.deleteMany({});
+    await db.once("open", async () => {
+      await User.deleteMany();
+      await Genre.deleteMany();
+      await Comment.deleteMany();
 
-    const users = await User.insertMany(userData);
-    const genres = await Genre.insertMany(genreData);
-    const comments = await Comment.insertMany(commentData);
-    
+      const users = await User.insertMany(userData);
+      const comments = await Comment.insertMany(commentData);
+      const genres = await Genre.insertMany(genreData);
 
-    console.log("all done!");
-    process.exit(0);
-  } catch (err) {
-    throw err;
+      // Populate comments for each genre
+      for (const comment of comments) {
+        const genre = genres.find((g) => g.name === comment.genre);
+        if (genre) {
+          genre.comments.push(comment._id);
+          await genre.save();
+        }
+      }
+
+      console.log("Seed data successfully populated!");
+      process.exit(0);
+    });
+  } catch (error) {
+    console.error("Error seeding the database:", error);
+    process.exit(1);
   }
-});
+};
+
+seedDatabase();

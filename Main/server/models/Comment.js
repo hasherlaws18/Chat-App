@@ -1,4 +1,6 @@
 const { Schema, model } = require("mongoose");
+const { GraphQLDateTime } = require("graphql-iso-date");
+// const { Date } = require("graphql-scalars/typings/mocks");
 
 const commentSchema = new Schema({
   username: {
@@ -13,6 +15,11 @@ const commentSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "Genre",
     required: true,
+  },
+  createdAt: {
+    type: Date,
+    default: () => Date.now(),
+    immutable: true,
   },
 });
 
