@@ -1,0 +1,99 @@
+[
+    {
+      "username": "alanhornbaker",
+      "email": "alanhornbaker@gmail.com",
+      "password": "Johnnie76598@",
+      "comments": []
+    },
+    {
+      "username": "jane_smith",
+      "email": "jane.smith@example.com",
+      "password": "P@ssw0rd123",
+      "comments": []
+    },
+    {
+      "username": "mike_jones",
+      "email": "mike.jones@example.com",
+      "password": "Secret123!",
+      "comments": []
+    },
+    {
+      "username": "sarah_wilson",
+      "email": "sarah.wilson@example.com",
+      "password": "Password456$",
+      "comments": []
+    },
+    {
+      "username": "alex_brown",
+      "email": "alex.brown@example.com",
+      "password": "SecurePass789",
+      "comments": []
+    },
+    {
+      "username": "emily_taylor",
+      "email": "emily.taylor@example.com",
+      "password": "Pass123word",
+      "comments": []
+    },
+    {
+      "username": "david_smith",
+      "email": "david.smith@example.com",
+      "password": "SecretPass!23",
+      "comments": []
+    },
+    {
+      "username": "laura_jones",
+      "email": "laura.jones@example.com",
+      "password": "SecurePassword123",
+      "comments": []
+    },
+    {
+      "username": "ryan_davis",
+      "email": "ryan.davis@example.com",
+      "password": "Password!987",
+      "comments": []
+    },
+    {
+      "username": "amanda_miller",
+      "email": "amanda.miller@example.com",
+      "password": "Passw0rd@123",
+      "comments": []
+    },
+    {
+      "username": "mark_johnson",
+      "email": "mark.johnson@example.com",
+      "password": "Secure!Password456",
+      "comments": []
+    },
+    {
+      "username": "jessica_wilson",
+      "email": "jessica.wilson@example.com",
+      "password": "Pass123word!",
+      "comments": []
+    },
+    {
+      "username": "andrew_smith",
+      "email": "andrew.smith@example.com",
+      "password": "Password789$",
+      "comments": []
+    },
+    {
+      "username": "olivia_jones",
+      "email": "olivia.jones@example.com",
+      "password": "SecureP@ssword!123",
+      "comments": []
+    },
+    {
+      "username": "benjamin_davis",
+      "email": "benjamin.davis@example.com",
+      "password": "Passw0rd123!",
+      "comments": []
+    },
+    {
+      "username": "natalie_brown",
+      "email": "natalie.brown@example.com",
+      "password": "SecurePassword!987",
+      "comments": []
+    }
+  ]
+  
