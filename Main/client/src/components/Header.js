@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../style.css';
 import logoImg from '../images/LitChat_Logo-removebg.png';
-import { Link } from 'react-router-dom';
 
 function Header({ currentPage, handlePageChange }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -95,9 +94,11 @@ function Header({ currentPage, handlePageChange }) {
             </li>
           </ul>
           <div className="py-2">
-            <Link to="/ Login" className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white ${currentPage === 'Login' ? 'nav-link active' : 'nav-link'}`}>
+          <a href="#login"
+                onClick={() => handlePageChange('Login')}
+                className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white ${currentPage === 'Login' ? 'nav-link active' : 'nav-link'}`}>
               Log In
-            </Link>
+            </a>
           </div>
         </div>
       </div>
