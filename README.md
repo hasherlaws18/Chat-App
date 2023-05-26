@@ -84,6 +84,9 @@ This application is licensed under the MIT license.
 
 Known erros and other issues can be raised to the repository on github at github.com/hasherlaws18/Chat-App , or can be sent to github.com/hasherlaws18. As last resort, questions can be emailed directly to alanhornbaker@gmail.com.
 
+## Heroku Link
+https://chat-app3.herokuapp.com/
+
 ## Credits
 
 - [alanhornbaker](https://github.com/alanhornbaker)
